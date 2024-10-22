@@ -1,0 +1,227 @@
+//QUESTION 1
+package projectzed.project_zaidi;
+import java.util.Scanner;
+
+public class EvenOdd {
+    public static void main(String[] args) {
+        Scanner zaidi = new Scanner(System.in);
+        
+        System.out.print("Enter a number: ");
+        int number = zaidi.nextInt();
+        
+        if (number % 2 == 0) {
+            System.out.println("Even");
+        } else {
+            System.out.println("Odd");
+        }
+
+        zaidi.close();
+    }
+}
+
+//question 2
+package projectzed.project_zaidi;
+import java.util.Scanner;
+
+public class Grade {
+    public static void main(String[] args) {
+        Scanner zaidi = new Scanner(System.in);
+        
+        System.out.print("Enter your grade (A, B, C, D, F): ");
+        char grade = zaidi.next().charAt(0);
+        
+        switch (grade) {
+            case 'A':
+                System.out.println("Excellent!");
+                break;
+            case 'B':
+                System.out.println("Good job!");
+                break;
+            case 'C':
+                System.out.println("You passed.");
+                break;
+            case 'D':
+                System.out.println("You can do better.");
+                break;
+            case 'F':
+                System.out.println("Fail. Please try again.");
+                break;
+            default:
+                System.out.println("Invalid grade. Please enter A, B, C, D, or F.");
+        }
+
+        zaidi.close();
+    }
+}
+//question 3
+package projectzed.project_zaidi;
+import java.util.Scanner;
+
+public class LeapYear {
+    public static void main(String[] args) {
+        Scanner zaidi= new Scanner(System.in);
+        
+        System.out.print("Enter a year: ");
+        int year = zaidi.nextInt();
+        
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+
+        zaidi.close();
+    }
+}
+//question 4
+package projectzed.project_zaidi;
+import java.util.Scanner;
+
+public class LargestNumber {
+    public static void main(String[] args) {
+        Scanner zaidi = new Scanner(System.in);
+        
+        System.out.print("Enter the first number: ");
+        int num1 = zaidi.nextInt();
+        
+        System.out.print("Enter the second number: ");
+        int num2 = zaidi.nextInt();
+        
+        System.out.print("Enter the third number: ");
+        int num3 = zaidi.nextInt();
+        
+        if (num1 >= num2 && num1 >= num3) {
+            System.out.println(num1 + " is the largest number.");
+        } else if (num2 >= num1 && num2 >= num3) {
+            System.out.println(num2 + " is the largest number.");
+        } else {
+            System.out.println(num3 + " is the largest number.");
+        }
+
+        zaidi.close();
+    }
+}
+
+//question 5
+package projectzed.project_zaidi;
+import java.util.Scanner;
+
+public class NumberCheck {
+    public static void main(String[] args) {
+        Scanner zaidi = new Scanner(System.in);
+        
+        System.out.print("Enter a number: ");
+        int number = zaidi.nextInt();
+        
+        if (number > 0) {
+            System.out.println(number + " is positive.");
+        } else if (number < 0) {
+            System.out.println(number + " is negative.");
+        } else {
+            System.out.println("The number is zero.");
+        }
+
+        zaidi.close();
+    }
+}
+
+//question 6
+package projectzed.project_zaidi;
+public class TrianglePartner {
+    public static void main(String[] args) {
+        int rows = 7;
+
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " ");
+            }
+            System.out.println("");
+        }
+    }
+}
+//question 7
+package projectzed.project_zaidi;
+import java.util.Scanner;
+
+public class DiamondShape {
+    public static void main(String[] args) {
+        Scanner zaidi = new Scanner(System.in);
+        
+        System.out.print("Enter the number of rows: ");
+        int rows = zaidi.nextInt();
+        
+        for (int i = 1; i <= rows; i++) {
+            for (int j = rows; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        for (int i = rows - 1; i >= 1; i--) {
+            for (int j = rows; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= (2 * i - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        zaidi.close();
+    }
+}
+
+//question 8
+package projectzed.project_zaidi;
+public class Average{
+    public static void main(String[] args) {
+        int[] numbers = {10, 12, 34, 23, 56, 78};
+        int sum = 0;
+        double average;
+
+        for (int i = 0; i < 6; i++) {
+            sum = sum + numbers[i];
+        }
+
+        average = sum / 6.0;
+        System.out.println("The average is: " + average);
+    }
+}
+
+//question 9
+package projectzed.project_zaidi;
+public class ReverseArray {
+    public static void main(String[] args) {
+        int[] numbers = {3, 4, 6, 1, 9, 7, 5, 8};
+        int length = numbers.length;
+        int[] reversed = new int[length];
+
+        for (int i = 0; i < length; i++) {
+            reversed[i] = numbers[length - 1 - i];
+        }
+
+        System.out.print("Reversed array: ");
+        for (int i = 0; i < length; i++) {
+            System.out.print(reversed[i] + " ");
+        }
+    }
+}
+//question 10
+package projectzed.project_zaidi;
+public class LargestElement {
+    public static void main(String[] args) {
+        int[] numbers = {34, 23, 12, 45, 67, 89, 234, 26, 10, 30, 43};
+        int largest = numbers[0];
+
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > largest) {
+                largest = numbers[i];
+            }
+        }
+
+        System.out.println("The largest element is: " + largest);
+    }
+}
